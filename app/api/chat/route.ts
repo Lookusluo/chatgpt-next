@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
   const apiKey = getApiKey(cookies().get('apiKey')?.value);
 
-  const fetchResult = await fetch(`https://${env.CHATGPT_NEXT_API_HOST}/v1/chat/completions`, {
+  const fetchResult = await fetch(`https://${env.CHATGPT_NEXT_API_HOST}/v1/chat-messages`, {
     method: HttpMethod.POST,
     headers: {
       ...HttpHeaderJson,
